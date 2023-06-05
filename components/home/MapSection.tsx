@@ -4,7 +4,7 @@ const MapSection = () => {
   return (
     <Map
       onLoad={() => {
-        console.log("load!");
+        console.log("load!!!");
       }}
     />
   );
