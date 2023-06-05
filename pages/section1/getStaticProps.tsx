@@ -22,6 +22,7 @@ export async function getStaticProps() {
 
   return {
     props: { data },
+    // ISR을 만들기 위함 5초마다 다시 함수를 실행해서 값이 다르면 다시 렌더링
     revalidate: 5,
   };
 }

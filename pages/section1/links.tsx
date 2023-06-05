@@ -3,6 +3,8 @@ import { useRouter } from "next/router";
 import { useEffect } from "react";
 
 export default function Links() {
+  //useRouter로 next/Link를 대체할 수 있음
+  // Link로 CSR처럼 동작하게할 수 있음
   const router = useRouter();
   console.log(router);
   useEffect(() => {

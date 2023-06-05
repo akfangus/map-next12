@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import { useEffect, useState } from "react";
+// next에서 CSR을 만들고싶으면 dynamic으로 선언해줘야함
 import dynamic from "next/dynamic";
 
 /** https://nextjs.org/docs/advanced-features/dynamic-import#with-no-ssr */
