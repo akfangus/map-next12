@@ -1,14 +1,13 @@
 import React, { useEffect, useRef } from "react";
 import Script from "next/script";
-import { Coordinates } from "../../types/store";
 import { NaverMap } from "../../types/map";
 
-const INITIAL_CENTER: Coordinates = [37.5262411, 126.99289439];
+const INITIAL_CENTER: StoreProject.Coordinates = [37.5262411, 126.99289439];
 const INITIAL_ZOOM = 10;
 
 type Props = {
   mapId?: string;
-  initialCenter?: Coordinates;
+  initialCenter?: StoreProject.Coordinates;
   initialZoom?: number;
   onLoad?: (map: NaverMap) => void;
 };
