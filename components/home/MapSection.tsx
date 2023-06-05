@@ -38,7 +38,7 @@ const MapSection = () => {
         initialCenter={initialCenter}
         initialZoom={initialZoom}
       />
-      <Markers />;
+      <Markers />
     </>
   );
 };

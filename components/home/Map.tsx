@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import Script from "next/script";
 import { NaverMap } from "../../types/map";
 import { INITIAL_CENTER, INITIAL_ZOOM } from "../../hooks/useMap";
+import styles from "../../styles/map.module.scss";
 
 type Props = {
   mapId?: string;
@@ -52,7 +53,7 @@ const Map = ({
         onReady={initializeMap}
       />
       {/* 스크립트를 불러오면 아래 mapId에 지도가 그려짐. */}
-      <div id={mapId} style={{ width: "100%", height: "100%" }}></div>
+      <div id={mapId} className={styles.map}></div>
     </>
   );
 };

@@ -3,6 +3,7 @@ import { Fragment, useEffect } from "react";
 import Header from "../components/home/Header";
 import MapSection from "../components/home/MapSection";
 import useStores from "../hooks/useStores";
+import DetailSection from "../components/home/DetailSection";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,8 +25,9 @@ export default function Home({ stores }: Props) {
       <Fragment>
         <Header />
 
-        <main style={{ width: "100%", height: "100%" }}>
+        <main style={{ position: "relative", width: "100%", height: "100%" }}>
           <MapSection />
+          <DetailSection />
         </main>
       </Fragment>
     </>
