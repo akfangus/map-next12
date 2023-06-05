@@ -5,13 +5,14 @@ import Image from "next/image";
 
 interface Props {
   rightElements?: React.ReactElement[];
+  onClickLogo?: () => void;
 }
 
-const Header = ({ rightElements }: Props) => {
+const Header = ({ rightElements, onClickLogo }: Props) => {
   return (
     <header className={styles.header}>
       <div className={styles.flexItem}>
-        <Link href={`/`} className={styles.box}>
+        <Link href={`/`} className={styles.box} onClick={onClickLogo}>
           <Image
             src="/inflearn.png"
             width={110}
