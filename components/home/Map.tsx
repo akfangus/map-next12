@@ -1,9 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import Script from "next/script";
 import { NaverMap } from "../../types/map";
-
-const INITIAL_CENTER: StoreProject.Coordinates = [37.5262411, 126.99289439];
-const INITIAL_ZOOM = 10;
+import { INITIAL_CENTER, INITIAL_ZOOM } from "../../hooks/useMap";
 
 type Props = {
   mapId?: string;
@@ -53,6 +51,7 @@ const Map = ({
         src={`https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=${process.env.NEXT_PUBLIC_NCP_CLIENT_ID}`}
         onReady={initializeMap}
       />
+      {/* 스크립트를 불러오면 아래 mapId에 지도가 그려짐. */}
       <div id={mapId} style={{ width: "100%", height: "100%" }}></div>
     </>
   );
