@@ -4,6 +4,7 @@ import Header from "../components/home/Header";
 import MapSection from "../components/home/MapSection";
 import useStores from "../hooks/useStores";
 import DetailSection from "../components/home/DetailSection";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,10 +23,21 @@ export default function Home({ stores }: Props) {
   }, [initializeStore, stores]);
   return (
     <>
+      <Head>
+        <title>메임</title>
+        <meta name="description" content="메이;ㄴ 페이지입니다." />
+      </Head>
       <Fragment>
         <Header />
 
-        <main style={{ position: "relative", width: "100%", height: "100%" }}>
+        <main
+          style={{
+            position: "relative",
+            width: "100%",
+            height: "100%",
+            overflow: "hidden",
+          }}
+        >
           <MapSection />
           <DetailSection />
         </main>
