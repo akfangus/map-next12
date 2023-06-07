@@ -3,14 +3,12 @@ import Header from "../components/common/Header";
 import styles from "../styles/Header.module.scss";
 import Link from "next/link";
 import Head from "next/head";
+import { NextSeo } from "next-seo";
 
 const feedBack = () => {
   return (
     <>
-      <Head>
-        <title>feedback</title>
-        <meta name="description" content="피드백 페이지입니다." />
-      </Head>
+      <NextSeo title="피드백" description="피드백 페이지" />
       <Fragment>
         <Header />
         <main></main>

@@ -1,10 +1,10 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
-import Head from "next/head";
 import DetailHeader from "../components/home/DetailHeader";
 import DetailContent from "../components/home/DetailContent";
 import styles from "../styles/detail.module.scss";
 import { useRouter } from "next/router";
 import useCurrentStore from "../hooks/useCurrentStore";
+import { NextSeo } from "next-seo";
 
 interface Props {
   store: StoreProject.Store;
@@ -23,10 +23,8 @@ const StoreDetail: NextPage<Props> = ({ store }) => {
 
   return (
     <>
-      <Head>
-        <title>상세 : {store.name}</title>
-        <meta name="description" content={store.description} />
-      </Head>
+      <NextSeo title={`상세 : ${store.name}`} description={store.description} />
+
       <div className={`${styles.detailSection2} ${styles.expanded}`}>
         <DetailHeader
           currentStore={store}

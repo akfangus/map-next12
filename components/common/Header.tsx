@@ -18,7 +18,7 @@ const Header = ({ rightElements, onClickLogo }: Props) => {
             width={110}
             height={20}
             alt="로고"
-            priority
+            // priority
           />
         </Link>
       </div>
