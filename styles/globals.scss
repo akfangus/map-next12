@@ -6,9 +6,12 @@
 
 html,
 body {
+  display: flex;
+  justify-content: center;
   padding: 0;
   margin: 0;
-  width: 100%;
+  // width: 100%;
+  min-width: 680px;
   height: 100%;
 }
 

@@ -1,18 +1,40 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import Head from "next/head";
+import DetailHeader from "../components/home/DetailHeader";
+import DetailContent from "../components/home/DetailContent";
+import styles from "../styles/detail.module.scss";
+import { useRouter } from "next/router";
+import useCurrentStore from "../hooks/useCurrentStore";
 
 interface Props {
   store: StoreProject.Store;
 }
 
 const StoreDetail: NextPage<Props> = ({ store }) => {
+  const router = useRouter();
+  const { setCurrentStore } = useCurrentStore();
+  const expanded = true;
+
+  const goToMap = () => {
+    setCurrentStore(store);
+    router.push(`
+    /?zoom=15&lat=${store.coordinates[0]}&lng=${store.coordinates[1]}`);
+  };
+
   return (
     <>
       <Head>
         <title>상세 : {store.name}</title>
         <meta name="description" content={store.description} />
       </Head>
-      <div>name : {store.name}</div>
+      <div className={`${styles.detailSection2} ${styles.expanded}`}>
+        <DetailHeader
+          currentStore={store}
+          expended={expanded}
+          onClickArrow={goToMap}
+        />
+        <DetailContent currentStore={store} expanded={expanded} />
+      </div>
     </>
   );
 };
