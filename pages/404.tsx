@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
 const ErrorPage = () => {
-  return <div>에러페이지</div>;
+    return <div>에러페이지</div>;
 };
 
 export default ErrorPage;

@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react';
 
 const NoSSR = () => {
-  return (
-    <>
-      <div>NoSSR</div>
-      <p>width : {window.innerWidth}</p>
-    </>
-  );
+    return (
+        <>
+            <div>NoSSR</div>
+            <p>width : {window.innerWidth}</p>
+        </>
+    );
 };
 
 export default NoSSR;
