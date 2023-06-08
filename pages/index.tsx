@@ -43,7 +43,7 @@ export default function Home({ stores }: Props) {
     );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     // nexp api routes로 불러오기
     // const stores = (await import('../public/stores.json')).default;
 
@@ -52,6 +52,6 @@ export async function getStaticProps() {
 
     return {
         props: { stores },
-        revalidate: 60 * 60,
+        // revalidate: 60 * 60,
     };
 }
